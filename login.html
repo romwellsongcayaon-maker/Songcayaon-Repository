@@ -4,23 +4,62 @@
 
 <!--Header-->
 <h1>Login</h1>
- <a href="regis.html"> <h2>No existing account? </h2> </a>
+<head>
+<style> 
+  .menu-buttons{
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    align-items: center;
+  }
+  .menu-buttons a{
+        text-decoration: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }   
+
+
+ .signin-btn{
+        color: white;
+        background-color: #1a3c6e;
+        border: 2px solid #1a3c6e;
+    }
+   .signin-btn:hover{
+    background-color:#14305a;
+   }
+</style>
+</head>
+
 <hr>
 
  <form>
-<div username>
-    <label for="Username">Username: </label>
-    <input type="text" id="Username" name="Username" placeholder="Enter Username">
-</div>
+  <div class ="form-row">
+      <label for="Username">Username: </label>
+      <input type="text" id="Username" name="Username" placeholder="Enter Username">
+  </div>
 
-<div password>
-    <label for="Password">Password: </label>
-    <input type="text" id="password" name="Password" placeholder="Enter Password ">
- </div>
+      <br>
+
+  <div class ="form-row">
+      <label for="Password">Password: </label>
+      <input type="text" id="password" name="Password" placeholder="Enter Password ">
+  </div>
  </form>
-<hr>
-<br>
 
+<hr>
+<body>  
+
+  <div class = "menu-buttons">
+      <h2>No existing account?</h2>
+      <a href="regis.html"class="signin-btn">Register</a>
+  </div>
+
+</body>
+ 
+<hr>
 
 <footer>
 <a href="home.html" >Homepage</a>

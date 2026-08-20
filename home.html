@@ -1,18 +1,104 @@
 <!DOCTYPE html>
 <HTml>
 <Title>Homepage</Title>
-<div header>
-<h1>Homepage</h1>
+<div Header>
+   
+    <div class= "header">
+    <table>
+        <tr>
+            <td><img src="flightacad.jpg" alt="My Logo" width="100" height="100"></td>
+            <td><h1>Flight Academy</h1></td>
+        </tr>
+    </table>
+    
+     <h1>Homepage</h1>
+    <hr>
+</div>
+
 </div>
 
 <!--Body-->
-<hr>
-<a href="A220.html" >
-<h1>A220 Family</h1> 
-<img src ="A220-300_Compressed_For_Web.jpg" width="700" height="400"></a>
-The Airbus A220 is a family of five-abreast narrow-body airliners by Airbus Canada Limited Partnership (ACLP). It was initially developed by Bombardier Aviation with the program launched on 13 July 2008 and had two years in-service as the Bombardier CSeries. The smaller A220-100 (formerly CS100) first flew on 16 September 2013, received an initial type certificate from Transport Canada on 18 December 2015, and entered service on 15 July 2016 with Swiss International Air Lines. The longer A220-300 (formerly CS300) first flew on 27 February 2015, received an initial type certificate on 11 July 2016, and entered service with airBaltic on 14 December 2016. Both launch operators recorded better-than-expected fuel burn and dispatch reliability, as well as positive feedback from passengers and crew.</p>
-<br>
+<head>
+  <style>
+    .Aircraft-table{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+    }   
 
+    .Aircraft-table th, .Aircraft-table td{
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: left;
+    }
 
+    .Aircraft-table th{
+        background-color: #1a3c6e;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .Aircraft-table tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
 
+    .Aircraft-table tr:hover{
+        background-color: #e0e8f5;
+    }
+ </style>
+ </head>
+
+<div class="body">
+   
+    <h1>Single-Aisle Aircraft</h1>
+    <div class="image-row">
+        <img src="Airbus_A220-300 (1).jpg" alt="Airbus Family" class="side-img" width="700" height="400">
+        <img src="boeing-s-737-max-7.avif" alt="Airbus A380" class="side-img" width="700" height="400">
+        <H1>Airbus AirbusA220-300 & Boeing 737 Max-7</H1>
+        <p>The smallest single-aisle aircraft are designed for short-to-medium routes with lower passenger demand, offering airlines flexibility on thinner routes. Airbus's entry in this category is the A220, originally developed by Bombardier as the C Series before Airbus acquired majority ownership in 2018. The A220 is known for its wide cabin, large windows, and fuel efficiency, making it popular for regional and domestic routes. Boeing's counterpart is the 737 MAX 7, the smallest variant of the MAX family, built to compete directly with the A220 while sharing commonality with the rest of the 737 fleet.</p>
+</div>
+
+<!--Specs-->
+<div single-aisle-specs>
+    
+    <h2>Single-Aisle Aircraft Specifications</h2>
+
+    <table class="Aircraft-table">
+        <thead>
+            <tr>
+                <th>Aircraft</th>
+                <th>Seating Capacity</th>
+                <th>Range</th>
+                <th>Length</th>
+                <th>Wingspan</th>
+                <th>Cruise Speed</th>
+                <th>Engines</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Airbus A220-300</td>
+                <td>120–160</td>
+                <td>3,400 nmi</td>
+                <td>38.7 m</td>
+                <td>35.1 m</td>
+                <td>Mach 0.78</td>
+                <td>2 × Pratt & Whitney PW1500G</td>
+            </tr>
+            <tr>
+                <td>Boeing 737 MAX 7</td>
+                <td>138–153</td>
+                <td>3,850 nmi</td>
+                <td>35.6 m</td>
+                <td>35.9 m</td>
+                <td>Mach 0.79</td>
+                <td>2 × CFM LEAP-1B</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+  
 </HTml>
