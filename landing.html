@@ -1,9 +1,143 @@
 <!DOCTYPE html>
 <html>
-<title>Airbus Vs. Boeing</title>
+<head>
+<meta charset="UTF-8"> 
+<title>Flight Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500,600,700&display=swap" rel="stylesheet">
+   <style> 
 
-<!--Header-->
-<div class= "header">
+    .root{
+      --bg: #f2f6fb;
+      --ink: #0B2545;
+      --line: #dce6f2;
+    }
+
+        .body{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+         -webkit-font-smoothing: antialiased;    
+        }
+
+        .menu-buttons{
+        display: flex;
+        gap: 15px;
+        margin: 15px 0;
+        align-items: center;
+
+        }
+        .menu-buttons a{
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }   
+        .login-btn{
+          color: white;
+            background-color: #1a3c6e;
+            border: 2px solid #1a3c6e;
+        }
+
+        .login-btn:hover{
+        background-color:#14305a;
+        }
+        .signin-btn{
+            color: white;
+            background-color: #1a3c6e;
+            border: 2px solid #1a3c6e;
+        }
+        .signin-btn:hover{
+        background-color:#14305a;
+        }
+        .home-btn{
+            color: white;
+            background-color: #1a3c6e;
+            border: 2px solid #1a3c6e;
+        }
+
+        .home-btn:hover{
+            background-color:#14305a;
+        }
+
+        .apply-button{
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 24px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: white;
+        background-color: #1a3c6e;
+        border: 2px solid #1a3c6e;
+        margin-top: 10px;
+        }
+
+        .apply_button:hover{background-color: #14305a;}
+
+        footer{width:100%; padding: 20px 30px; box-sizing: border-box;}
+
+        .reflink{color: #1a3c6e;}
+     
+         .job-list{
+            max-width: 700px;
+            background: #ffffff;
+            margin-top: 20px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 16px 20px;
+         }
+
+         .job-list h4{
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #5b7a9c;
+            font-family: sans-serif;
+         }
+ 
+         .job-item:last-child{
+            border-bottom: none;
+         }
+
+         .job-name{
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--ink);
+         }
+
+         .job-item{
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--ink);
+         }
+
+         .job-loc{
+         font-size: 12px;
+         color: #6b7d93;
+         }
+
+         .job-item a{
+            font-size: 13px;
+            color: #1a3c6e;
+            text-decoration: underline;
+            white-space: nowrap;
+            margin-left: 12px;
+         }
+
+   </style>
+</head>
+
+
+<div logo>
     <table>
         <tr>
             <td><img src="flightacad.jpg" alt="My Logo" width="100" height="100"></td>
@@ -13,91 +147,145 @@
     <hr>
 </div>
 
-<!--Menu-->
-
-   <style> 
-    .menu-buttons{
-    display: flex;
-    gap: 15px;
-    margin: 15px 0;
-    align-items: center;
-
-    }
-    .menu-buttons a{
-        text-decoration: none;
-        padding: 8px 20px;
-        border-radius: 5px;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-size: 14px;
-    }   
-    .login-btn{
-        color: #333;
-        border: 2px solid #333;
-        background-color: transparent;
-    }
-
-    .login-btn:hover{
-    background-color:#333;
-    color: white;
-    }
-    .signin-btn{
-        color: white;
-        background-color: #1a3c6e;
-        border: 2px solid #1a3c6e;
-    }
-   .signin-btn:hover{
-    background-color:#14305a;
-   }
-   </style>
-</head>
-
-<body>      
-<h1>Menu</h1>
-<div class = "menu-buttons">
-    <h3>Found a job in both companies?</h3>
-    <a href="login.html"class="login-btn">Log-in</a>
-    <a href="regis.html"class="signin-btn">Register</a>
-</div>
-</body>
-
+<menu>      
+    <div class = "menu-buttons">
+        <a href="home.html" class="home-btn">Home</a>
+        <a href="login.html"class="login-btn">Log-in</a>
+        <a href="regis.html"class="signin-btn">Register</a>
+    </div>
 </menu>
 
 
 <!--Body-->
 
 <body>
-<hr>
-<div airbus> 
+ <hr>
+    <section class="Airbus">
 
-    <h1>Airbus SE</h1>
-    <img src="Airbus fam.jpg" height="400" width="700" alt ="Description" align: Center;>
-    <p>Airbus originated from Airbus Industrie GIE, a consortium of European aerospace companies established in 1970 to produce a wide-body aircraft to compete with American-built airliners. In 2000, the consortium's parent firms—Aérospatiale-Matra of France, DASA of Germany, and CASA of Spain—merged to form the European Aeronautic Defence and Space Company (EADS), which later acquired full ownership of Airbus Industrie. EADS rebranded as Airbus SE in 2015. Reflecting its multinational origins, the company operates offices and assembly plants in France, Germany, Spain, and the United Kingdom, along with more recent additions in Canada, Malaysia, the United States, Morocco, and India.</p>
+        <h1>Airbus SE</h1>
+        <img src="Airbus fam.jpg" height="400" width="700" alt ="Description" align: Center;>
+        <p>Airbus originated from Airbus Industrie GIE, a consortium of European aerospace companies established in 1970 to produce a wide-body aircraft to compete with American-built airliners. In 2000, the consortium's parent firms—Aérospatiale-Matra of France, DASA of Germany, and CASA of Spain—merged to form the European Aeronautic Defence and Space Company (EADS), which later acquired full ownership of Airbus Industrie. EADS rebranded as Airbus SE in 2015. Reflecting its multinational origins, the company operates offices and assembly plants in France, Germany, Spain, and the United Kingdom, along with more recent additions in Canada, Malaysia, the United States, Morocco, and India.</p>
+        <a href="" class="apply-button"> Apply to Airbus</a>
+ 
 
-</div>
+   
 
- <div Boeing>
-    <h1>Boeing</h1>
-    <img src="Boeing-737-MAX-Family-scaled.webp" height="400" width="700" alt="Description" align: Center;>
-    <p>The Boeing Company is an American multinational corporation that designs and manufactures airplanes, rotorcraft, rockets, satellites, and missiles worldwide. The company also provides leasing and product support services. Boeing is among the largest global aerospace manufacturers; it is the fourth-largest defense contractor in the world based on 2022 revenue and is the largest exporter in the United States by dollar value. Boeing was founded in 1916 by William E. Boeing in Seattle, Washington. The present corporation is the result of the merger of Boeing with McDonnell Douglas on August 1, 1997.</p>
-</div>
+        <div class="job-list">
+            <h4>Open Positions</h4>
+              
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Structures Design Engineer</div>
+                    <div class="job-loc">Toulouse, France</div>
+                     <a href="">View</a>
+                </div>
+
+            </div>
+            
+           <div class="job-item">
+                <div>
+                    <div class="job-name">A320 Final Assembly Technician</div>
+                    <div class="job-loc">Hamburg, Germany</div>
+                     <a href="">View</a>
+                </div>
+
+            </div>
+
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Flight Physics Engineer</div>
+                    <div class="job-loc">Toulouse, France</div>
+                     <a href="">View</a>
+                </div>
+
+            </div>
+
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Supply Chain Coordinator</div>
+                    <div class="job-loc">Mobile, Alabama, USA</div>
+                     <a href="#">View</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
 
 </body>
 
 
-<!--Footer-->
-<div footer>
-    <hr>
-    <h3>References: 
-        <br>
-        <a href="https://www.airbus.com/en" target="_blank">
-            <span class="ref-link">Airbus' Website</span>
-        </a>
-        <br>
-        <a href="https://www.boeing.com/" target="_blank">
-            <span class="ref-link">Boeing's Website</span>
-        </a>
-    </h3>
+ <section class="Boeing">
+        <h1>Boeing</h1>
+        <img src="Boeing-737-MAX-Family-scaled.webp" height="400" width="700" alt="Description" align: Center;>
+        <p>The Boeing Company is an American multinational corporation that designs and manufactures airplanes, rotorcraft, rockets, satellites, and missiles worldwide. The company also provides leasing and product support services. Boeing is among the largest global aerospace manufacturers; it is the fourth-largest defense contractor in the world based on 2022 revenue and is the largest exporter in the United States by dollar value. Boeing was founded in 1916 by William E. Boeing in Seattle, Washington. The present corporation is the result of the merger of Boeing with McDonnell Douglas on August 1, 1997.</p>
+        <a href="" class="apply-button">Apply to Boeing</a>
 
-    
-</div>
+    <div class="job-list">
+            <h4>Open Positions</h4>
+              
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Aircraft Maintenance Technician</div>
+                    <div class="job-loc">Everett, Washington</div>
+                    <a href="">View</a>
+                </div>
+
+            </div>
+            
+           <div class="job-item">
+                <div>
+                    <div class="job-name">Avionics Systems Engineer</div>
+                    <div class="job-loc">Seattle, Washington</div>
+                     <a href="">View</a>
+                </div>
+
+            </div>
+
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Flight Test Engineerr</div>
+                    <div class="job-loc">Charleston, South Carolina</div>
+                    <a href="">View</a>
+                </div>
+
+            </div>
+
+            <div class="job-item">
+                <div>
+                    <div class="job-name">Manufacturing Quality Inspector</div>
+                    <div class="job-loc">Renton, Washington</div>
+                    <a href="">View</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+</section>
+
+
+
+
+
+
+<!--Footer-->
+<footer>
+    <hr>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; font-family: sans-serif; font-size: 13px;"></div>
+
+    <div>
+        <p>&copy; 2026 Flight Academy. All rights reserved.</p>
+    </div>
+    <div>
+        <a href="home.html" class="reflink">Home</a> |
+        <a href="login.html" class="reflink">Log-in</a> |
+        <a href="regis.html" class="reflink">Register</a>
+    </div>
+
+
+</footer>

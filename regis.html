@@ -1,45 +1,211 @@
 <!DOCTYPE html>
+<html lang ="en">
 <HTml>
-<Title>Registration</Title>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-<!--Header-->
-<h1>Sign-in</h1>
-<hr>
-<Br>
+:root {
+ 
+    --bg: #F2F6FB;
+    --surface: #FFFFFF;
+    --ink: #0B2545;
+    --ink-dim: #5C7593;
+    --blue: #0057D8;
+    --blue-dim: #E4EFFB;
+    --line: #DCE6F2;
+    --radius: 8px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'inter', sans-serif;
+    -webkit-font-smoothing: antialiased;    
+}
+
+body{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 40px 20px;
+}
+
+.brand{
+display: flex;  
+align-items: center;
+gap: 10px;
+margin-bottom: 28px;
+}
     
-<!--Informations-->
-<form>      
-<div username>
+.brand img{
+width: 32px;
+height: 32px;
+object-fit: contain;
+border-radius:4px;
+}
 
-    <label for="First name">First name: </label>
-    <input type="text" id="First name" name="Fist name" placeholder="Enter First name">
+.brand span{
+font-weight: 700;
+font-size: 17px;
+letter-spacing: -0.01em;
+}
 
-</div>
+.card{
+width: 100%;
+max-width: 400px;
+background: var(--surface);
+border: 1px solid var(--line);
+border-radius: 16px;
+padding: 36px 32px;
+box-shadow: 0px 4px 8px rgba(11, 37, 69, 0.14);
+}
 
-<div Last name>
+h1{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+}
 
-    <label for="Last name">Last Name: </label>
-    <input type="text" id="Last name" name="Last name" placeholder="Enter Last name">
+.sub{
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin: 0 0 32px;
+}
 
-</div>
+form{display: flex; flex-direction:column; gap: 16px;}
 
-<div User name>  
+.field{display: flex; flex-direction: column; gap: 6px;}
 
-    <label for="Username">Username: </label>
-    <input type="text" id="Username" name="Username" placeholder="Enter Username">
+.field label{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+}
 
-</div>
+.field input {
+background: var(--bg);
+border: 1px solid var(--line);
+border-radius: var(--radius);
+padding: 11px 13px;
+font-size: 14px;
+color: var(--ink);
+outline: none;
+width: 100%;
+transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
 
-<div Address>
+.agree{
+display: flex;
+align-items: flex-start;
+gap: 9px;
+font-size: 13px;
+color: var(--ink-dim);  
+line-height: 1.5;
+margin-top: 2px;
+}
 
-    <label for="Username">Username: </label>
-    <input type="text" id="Username" name="Username" placeholder="Enter Username">
+.agree input{margin-top: 3px; accent-color: var(--blue); width: auto; flex-shrink:0;}
+.agree a{color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px;}
 
-</div>
+button.submit{
+background: var(--blue);
+margin-top: 6px;
+background: var(--blue);
+color: #ffff;
+border: none;
+border-radius: var(--radius);
+padding: 13px 16px;
+font-family: 'inter', sans-serif;
+font-weight: 600;
+font-size: 14.5px;
+cursor: pointer;
+transition: background 0.15s ease, transform 0.1s ease;
+}
 
-<div></div>
+button.submit:hover{background: #0046B0;}
+button.submit:active{transform: translateY(1px);}
+.switch-line{
+text-align: center;
+font-size: 13px;
+color: var(--ink-dim);
+margin-top: 20px;
+}
+.switch-line a{color: var(--blue); text-decoration: none; font-weight: 500;}
+:Focus-visible{outline: 2px solid var(--blue); outline-offset: 2px;}
 
-</form>     
 
 
-</HTml>
+
+</style>
+</head>
+<body>
+
+
+    <div class="brand">
+        <img src="Flightacad.jpg" alt="My Logo" width="40" height="40">
+        <span>Flight Academy</span>
+    </div>
+    <br>
+
+    <div class="card">
+        <h1>Create Your Account</h1>
+        <p class="sub">Track specs, range, and cabin data side by side across Airbus and Boeing fleets and Apply job application if you're interesed joining the aviation industry.</p>
+
+
+        <form nonvalidate>
+            <div class="field">
+                <label for="FullName">Full name</label>
+                <input type="text" id="FullName" name="FullName" >
+            </div>
+    
+
+            <div class="field">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" >
+            </div>
+
+            <div class="field">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" d>
+            </div>
+        
+            <div class="field">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" id="ConfirmPassword" name="ConfirmPassword">
+
+            <div class="field">
+                <label for="Address">Address</label>
+                <input type="text" id="Address" name="Address" >
+            </div>
+
+            <label class="agree">
+                <input type="checkbox" name="terms" required>
+                <span> I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>   </span>
+                </label>     
+            </label>
+           
+              <button type="submit" class="submit">Create Account</button>
+           
+        </form>
+
+    <p class="switch-line"> Already have an account? <a href="login.html">Log in</a></p>
+
+    </div>
+
+</body>
+
+</html>
