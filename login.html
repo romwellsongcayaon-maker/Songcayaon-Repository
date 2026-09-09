@@ -24,8 +24,7 @@
 *{ box-sizing: border-box; }
 
 html, body{
-    margin: 0;
-    padding: 0;
+   
     background: var(--bg);
     color: var(--ink);
     font-family: 'inter', sans-serif;
@@ -55,7 +54,6 @@ object-fit: contain;
 border-radius:4px;
 }
 
-
 .card{
 width: 100%;
 max-width: 400px;
@@ -70,7 +68,6 @@ h1{
     font-weight: 700;
     font-size: 22px;
     margin: 0 0 6px;
-    letter-spacing: -0.01em;
 }
 
 .sub{
@@ -112,9 +109,6 @@ line-height: 1.5;
 margin-top: 2px;
 }
 
-.agree input{margin-top: 3px; accent-color: var(--blue); width: auto; flex-shrink:0;}
-.agree a{color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px;}
-
 button.submit{
 background: var(--blue);
 margin-top: 6px;
@@ -138,12 +132,8 @@ font-size: 13px;
 color: var(--ink-dim);
 margin-top: 20px;
 }
-.switch-line a{color: var(--blue); text-decoration: none; font-weight: 500;}
-:Focus-visible{outline: 2px solid var(--blue); outline-offset: 2px;}
 
-@media(prefers-reduced-motion: reduce){
-    *{transition: none !important;}
-}
+
 
 </style>
 </head>
@@ -171,7 +161,7 @@ margin-top: 20px;
             </div>
             
             <label class="agree">
-                <input type="checkbox" name="terms" required>
+                <input type="checkbox" name="terms">
                 <span>Remember Account?</span>
             
             </label>
@@ -179,6 +169,10 @@ margin-top: 20px;
             <button type="submit" class="submit" onclick="">Log-In</button>
         
         </form>   
+                  
+
+        <p class="switch-line"> Don't have an Account? <a href="regis.html">Register</a></p>
+
 
     </div>
 
