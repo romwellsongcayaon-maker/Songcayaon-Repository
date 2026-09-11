@@ -1,157 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spot &amp; Fly</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, system-ui, sans-serif;
+    background: #eef2f6;
+    color: #1a1a1a;
+  }
 
-<meta charset="UTF-8"> 
-<title>Flight Academy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500,600,700&display=swap" rel="stylesheet">
-<link rel ="stylesheet" href="Styles.css">
+  /* ---------- Navbar ---------- */
+  nav {
+    background: #0B3D91;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+  }
+  .logo img {
+    height: 100px;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .nav-links a:hover { color: #cfe0f7; }
 
+  /* ---------- Hero ---------- */
+  .hero {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+  }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; }
+  }
 
+  /* ---------- Plane types section ---------- */
+  .types {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 48px 80px;
+  }
+  .types h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 28px;
+  }
+  .types-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 56px;
+  }
+  @media (max-width: 760px) {
+    .types-grid { grid-template-columns: 1fr; }
+  }
+  .type-item {
+    display: flex;
+    gap: 20px;
+  }
+  .type-item img {
+    width: 300px;
+    height:  200px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .type-item h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .type-item p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #333;
+  }
 
-<div logo>
-    <table>
-        <tr>
-            <td><img src="flightacad.jpg" alt="My Logo" width="100" height="100"></td>
-            <td><h1>Flight Academy</h1></td>
-        </tr>
-    </table>
-    <hr>
-</div>
+  /* ---------- Community section ---------- */
+  .community {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 48px 88px;
+  }
+  .community h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+  .community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .community p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  .community img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .btn-start {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 14px 26px;
+    border-radius: 3px;
+  }
+  .btn-start:hover { background: #333; }
+  @media (max-width: 760px) {
+    .community-grid { grid-template-columns: 1fr; }
+  }
 
-<menu>      
-    <div class = "menu-buttons">
-        <a href="home.html" class="home-btn">Home</a>
-        <a href="login.html"class="login-btn">Log-in</a>
-        <a href="regis.html"class="signin-btn">Register</a>
-    </div>
-</menu>
-
-
-<!--Body-->
-
+  /* ---------- Footer ---------- */
+  footer {
+    background: #0B3D91;
+    padding: 24px 48px;
+    display: flex;
+    gap: 32px;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  footer a:hover { color: #cfe0f7; }
+</style>
+</head>
 <body>
- <hr>
-    <section class="Airbus">
 
-        <h1>Airbus SE</h1>
-        <img src="Airbus fam.jpg" height="400" width="700" alt ="Description" align: Center;>
-        <p>Airbus originated from Airbus Industrie GIE, a consortium of European aerospace companies established in 1970 to produce a wide-body aircraft to compete with American-built airliners. In 2000, the consortium's parent firms—Aérospatiale-Matra of France, DASA of Germany, and CASA of Spain—merged to form the European Aeronautic Defence and Space Company (EADS), which later acquired full ownership of Airbus Industrie. EADS rebranded as Airbus SE in 2015. Reflecting its multinational origins, the company operates offices and assembly plants in France, Germany, Spain, and the United Kingdom, along with more recent additions in Canada, Malaysia, the United States, Morocco, and India.</p>
-        <a href="" class="apply-button"> Apply to Airbus</a>
- 
+<nav>
+  <div class="logo">
+    <img src="1.jpg" alt="Spot & Fly logo">
+  </div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Log-in</a>
+    <a href="signup.html">Sign-in</a>
+  </div>
+</nav>
 
-   
-
-        <div class="job-list">
-            <h4>Open Positions</h4>
-              
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Structures Design Engineer</div>
-                    <div class="job-loc">Toulouse, France</div>
-                     <a href="">View</a>
-                </div>
-
-            </div>
-            
-           <div class="job-item">
-                <div>
-                    <div class="job-name">A320 Final Assembly Technician</div>
-                    <div class="job-loc">Hamburg, Germany</div>
-                     <a href="">View</a>
-                </div>
-
-            </div>
-
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Flight Physics Engineer</div>
-                    <div class="job-loc">Toulouse, France</div>
-                     <a href="">View</a>
-                </div>
-
-            </div>
-
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Supply Chain Coordinator</div>
-                    <div class="job-loc">Mobile, Alabama, USA</div>
-                     <a href="#">View</a>
-                </div>
-
-            </div>
-            
-        </div>
-
-    </section>
-
-</body>
-
-
- <section class="Boeing">
-        <h1>Boeing</h1>
-        <img src="Boeing-737-MAX-Family-scaled.webp" height="400" width="700" alt="Description" align: Center;>
-        <p>The Boeing Company is an American multinational corporation that designs and manufactures airplanes, rotorcraft, rockets, satellites, and missiles worldwide. The company also provides leasing and product support services. Boeing is among the largest global aerospace manufacturers; it is the fourth-largest defense contractor in the world based on 2022 revenue and is the largest exporter in the United States by dollar value. Boeing was founded in 1916 by William E. Boeing in Seattle, Washington. The present corporation is the result of the merger of Boeing with McDonnell Douglas on August 1, 1997.</p>
-        <a href="" class="apply-button">Apply to Boeing</a>
-
-    <div class="job-list">
-            <h4>Open Positions</h4>
-              
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Aircraft Maintenance Technician</div>
-                    <div class="job-loc">Everett, Washington</div>
-                    <a href="">View</a>
-                </div>
-
-            </div>
-            
-           <div class="job-item">
-                <div>
-                    <div class="job-name">Avionics Systems Engineer</div>
-                    <div class="job-loc">Seattle, Washington</div>
-                     <a href="">View</a>
-                </div>
-
-            </div>
-
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Flight Test Engineerr</div>
-                    <div class="job-loc">Charleston, South Carolina</div>
-                    <a href="">View</a>
-                </div>
-
-            </div>
-
-            <div class="job-item">
-                <div>
-                    <div class="job-name">Manufacturing Quality Inspector</div>
-                    <div class="job-loc">Renton, Washington</div>
-                    <a href="">View</a>
-                </div>
-
-            </div>
-
-
-
-        </div>
+<section class="hero">
+  <h1>Share your Aviation Photo!</h1>
+  <p>Spot &amp; Fly is where plane spotters upload their catches, from a first-timer's shot of a regional turboprop to a rare livery caught on approach at golden hour. Post your photos, tag the registration and location, and let the community weigh in &mdash; comment on the shot, swap notes on the type, or just appreciate a clean crop and a lucky angle. Whether you're chasing your next spot from an airport fence or just love watching metal in the sky, this is a place built for people who stop and look up.</p>
 </section>
 
-<!--Footer-->
+<section class="types">
+  <h2>No Matter What Type of Plane it is</h2>
+
+  <div class="types-grid">
+    <div class="type-item">
+      <img src="a380.jpg" alt="Commercial airliner">
+      <div>
+        <h3>Commercial Airliners</h3>
+        <p>Airbus, Boeing, Embraer, ATR, and Bombardier.</p>
+      </div>
+    </div>
+
+    <div class="type-item">
+      <img src="beluga.webp" alt="Cargo aircraft">
+      <div>
+        <h3>Cargo Aircraft</h3>
+        <p>Amazon Air, FedEx Express, UPS Airlines, DHL Aviation, Cargolux, and Atlas Air.</p>
+      </div>
+    </div>
+
+    <div class="type-item">
+      <img src="M A.jpg" alt="Military aircraft">
+      <div>
+        <h3>Military Aircraft</h3>
+        <p>Lockheed Martin, Sukhoi, Dassault, Saab, and Chendu Aerospace China.</p>
+      </div>
+    </div>
+
+    <div class="type-item">
+      <img src="GA.avif" alt="General aviation aircraft">
+      <div>
+        <h3>General Aviation</h3>
+        <p>Cessna, Cirrus Aircraft, Piper Aircraft, Beechcraft, Diamond Aircraft Industries, Pilatus Aircraft.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community">
+  <h2>Be a part of the Aviation Community!</h2>
+  <div class="community-grid">
+    <div>
+      <p>Every great catch deserves an audience. Post your shot, tag the reg, and watch the comments roll in from people who actually know their A350 from their A330. On Spot &amp; Fly, every upload starts a conversation &mdash; swap intel on the best fence spots, settle debates over rare liveries, or just get the "nice grab!" you've been chasing since golden hour. This isn't a feed you scroll past. It's a community that shows up for the hobby the same way you do.</p>
+      <a href="#" class="btn-start">SIGN-IN NOW!</a>
+    </div>
+    <img src="aviation comm.jpg" alt="Aviation community">
+  </div>
+</section>
+
 <footer>
-    <hr>
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; font-family: sans-serif; font-size: 13px;"></div>
-
-    <div>
-        <p>&copy; 2026 Flight Academy. All rights reserved.</p>
-    </div>
-    <div>
-        <a href="home.html" class="reflink">Home</a> |
-        <a href="login.html" class="reflink">Log-in</a> |
-        <a href="regis.html" class="reflink">Register</a>
-    </div>
-
-
+  <a href="#">FAQ</a>
+  <a href="#">Contact Us</a>
 </footer>
+
+</body>
+</html>
