@@ -7,65 +7,63 @@
   <title>Flight Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel ="stylesheet" href="Styles.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500,600,700&display=swap" rel="stylesheet">
+<link rel ="stylesheet" href="Registration Style.css">
 </head>
 
+
+
 <body>
+<div class="brand">
+    <img src="1.jpg" alt="My Logo" width="40" height="40">
+    <span>Spot and Fly</span>
+</div>
+<br>
+
+<div class="card">
+    <h1>Create Your Account</h1>
+    <p class="sub">Track specs, range, and cabin data side by side across Airbus and Boeing fleets and Apply job application if you're interesed joining the aviation industry.</p>
 
 
-    <div class="brand">
-        <img src="Flightacad.jpg">
-        <span>Flight Academy</span>
-    </div>
-    <br>
+    <form nonvalidate>
+        <div class="field">
+            <label for="FullName">Full name</label>
+            <input type="text" id="FullName" name="FullName" >
+        </div>
+ 
 
-    <div class="card">
-        <h1>Create Your Account</h1>
-        <p class="sub">Track specs, range, and cabin data side by side across Airbus and Boeing fleets and Apply job application if you're interesed joining the aviation industry.</p>
+        <div class="field">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" >
+        </div>
 
-
-        <form infos>
-            <div class="field">
-                <label for="FullName">Full name</label>
-                <input type="text" id="FullName">
-            </div>
+        <div class="field">
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" d>
+        </div>
     
+        <div class="field">
+            <label for="ConfirmPassword">Confirm Password</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword">
 
-            <div class="field">
-                <label for="Email">Email</label>
-                <input type="email" id="Email">
-            </div>
+        <div class="field">
+            <label for="Address">Address</label>
+            <input type="text" id="Address" name="Address" >
+        </div>
 
-            <div class="field">
-                <label for="Password">Password</label>
-                <input type="password" id="Password">
-            </div>
-        
-            <div class="field">
-                <label for="ConfirmPassword">Confirm Password</label>
-                <input type="password" id="ConfirmPassword" name="ConfirmPassword">
+        <label class="agree">
+            <input type="checkbox" name="terms" required>
+            <span> I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>   </span>
+            </label>     
+        </label>
 
-            <div class="field">
-                <label for="Address">Address</label>
-                <input type="text" id="Address">
-            </div>
+        <button type="submit" class="submit">Create Account</button>
+    </form>
 
-            <label class="agree">
-                <input type="checkbox" name="terms" required>
-                <span> I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>   </span>
-                </label>     
-            </label>
-           
-              <button type="submit" class="submit">Create Account</button>
-           
-        </form>
+<p class="switch-line"> Already have an account? <a href="login.html">Log in</a></p>
 
-    <p class="switch-line"> Already have an account? <a href="login.html">Log in</a></p>
-
-    </div>
+</div>
 
 </body>
 
-</html>
+</HTml>

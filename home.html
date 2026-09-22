@@ -1,210 +1,175 @@
 <!DOCTYPE html>
-<HTml>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airbus and Boeing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spot &amp; Fly — Browse</title>
+<link rel ="stylesheet" href="Home.css">
 
-
-  <style>
-        .Aircraft-table{
-        border-collapse: collapse;
-        width: 100%;
-        font-family: sans-serif;
-        font-size: 14px;
-        margin: 20px 0;
-        }   
-
-        .Aircraft-table th, .Aircraft-table td{
-            border: 1px solid #333;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .Aircraft-table th{
-            background-color: #1a3c6e;
-            color: white;
-            font-weight: bold;
-        }
-         
-       .Aircraft-table tr:hover{
-            background-color: #e0e8f5;
-        }
-    </style>
- </head>
-
-<div body>
-    <div header>
-    <table>
-        <tr>
-            <td><img src="flightacad.jpg" alt="My Logo" width="100" height="100"></td>
-            <td><h1>Flight Academy</h1></td>
-        </tr>
-    </table>
-    
-     <h1>Homepage</h1>
-    <hr>
-</div>
-<!--Body-->
-
+</head>
 <body>
-    <h1>Single-Aisle Aircraft (NarrowBody)</h1>
-    <div single>
-        <img src="Airbus_A220-300 (1).jpg" alt="Airbus Family" class="side-img" width="700" height="400">
-        <img src="boeing-s-737-max-7.avif" alt="Airbus A380" class="side-img" width="700" height="400">
-        <H1>Airbus AirbusA220-300 & Boeing 737 Max-7</H1>
-        <p>A narrowbody (or single-aisle) aircraft has just one aisle down the cabin, typically seating 3-6 passengers across, with a fuselage diameter usually around 3.5–4 meters — noticeably slimmer than a widebody's twin-aisle cabin. Narrowbodies are the backbone of short-to-medium-haul flying: domestic routes, regional international hops, and increasingly, thanks to newer engine technology, even some longer routes that once required widebodies. They're cheaper to operate per flight, faster to turn around at gates, and make up the large majority of aircraft in most airline fleets worldwide. The Airbus A320 and Boeing 737 MAX 7 sit at the "standard" size point within their respective families — not the smallest, not the largest — making them a natural side-by-side comparison.</p>
-    </div>
 
-<!--Specs-->
-<div Single>
-    
-    <h2>Single-Aisle Aircraft Specifications</h2>
+<nav>
+  <div class="logo">
+    <img src="1.jpg" alt="Spot & Fly logo">
+  </div>
+  <div class="nav-links">
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="Profile.html">Profile</a>
+  </div>
+</nav>
 
-    <table class="Aircraft-table">
-        <thead>
-            <tr>
-                <th>Aircraft</th>
-                <th>Seating Capacity</th>
-                <th>Range</th>
-                <th>Length</th>
-                <th>Wingspan</th>
-                <th>Cruise Speed</th>
-                <th>Fuselage</th>
-                <th>Engines</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Airbus A220-300</td>
-                <td>120-190+</td>
-                <td>3,400 nmi</td>
-                <td>38.7 m</td>
-                <td>35.1 m</td>
-                <td>38.7 m</td>
-                <td>Mach 0.78</td>
-                <td>Pratt & Whitney PW1500G</td>
-            </tr>
-            <tr>
-                <td>Boeing 737 MAX 7</td>
-                <td>130-170+</td>
-                <td>3,850 nmi</td>
-                <td>35.6 m</td>
-                <td>35.9 m</td>
-                <td>Mach 0.79</td>
-                <td>35.5 m</td>
-                <td>CFM LEAP-1B</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="layout">
+  <aside>
+    <ul class="sort-links">
+      <li><a href="#">Today's Most Popular</a></li>
+      <li><a href="#photo-of-the-week">Photo of the Week</a></li>
+      <li><a href="#">Most Popular</a></li>
+      <li><a href="#">People's Choice</a></li>
+    </ul>
+    <ul class="category-links">
+      <li><a href="#commercial">Commercial Airliners</a></li>
+      <li><a href="#cargo">Cargo Aircraft</a></li>
+      <li><a href="#military">Military Aircraft</a></li>
+      <li><a href="#general">General Aviation</a></li>
+    </ul>
+  </aside>
 
+  <main>
+
+    <section class="browse-section" id="photo-of-the-week">
+      <h1>Photo of the Week</h1>
+      <div class="card-row">
+        <div class="card">
+          <img src="MGS Aviation.webp">
+          <h3>MGS Aviation</h3>
+          <p>Likes: 432<br>Comments: 12<br>Views: 9,828</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Innokenty Grigorieve.webp">
+          <h3>Innokenty Grigorieve</h3>
+          <p>Likes: 176<br>Comments: 4<br>Views: 5,828</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Jet Photo.jpg" alt="Barbara Gynp">
+          <h3>Barbara Gynp</h3>
+          <p>Likes: 142<br>Comments: 7<br>Views: 3,329</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+      <div class="dots"><span class="active"></span><span></span></div>
+    </section>
+
+    <section class="browse-section" id="commercial">
+      <h1>Commercial Airliners</h1>
+      <div class="card-row">
+        <div class="card">
+          <img src="Ysosr.jpeg" alt="Ysosr">
+          <h3>Ysosr</h3>
+          <p>Likes: 208<br>Comments: 17<br>Views: 1,973</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Tzeman Kenny Ho.jpeg">
+          <h3>Tzeman Kenny Ho</h3>
+          <p>Likes: 181<br>Comments: 5<br>Views: 2,091</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Grzesiek Krupa.jpeg">
+          <h3>Grzesiek Krupa</h3>
+          <p>Likes: 19<br>Comments: 0<br>Views: 1,041</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+      <div class="dots"><span class="active"></span><span></span></div>
+    </section>
+
+    <section class="browse-section" id="cargo">
+      <h1>Cargo Aircraft</h1>
+      <div class="card-row">
+        <div class="card">
+          <img src="Apologize000.webp" alt="Apologize000">
+          <h3>Apologize000</h3>
+          <p>Likes: 21<br>Comments: 5<br>Views: 981</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="LRA Spotters.jpg" alt="LRA Spotters">
+          <h3>LRA Spotters</h3>
+          <p>Likes: 79<br>Comments: 0<br>Views: 1,090</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Gerrit Greim.webp" alt="Gerrit Greim">
+          <h3>Gerrit Greim</h3>
+          <p>Likes: 132<br>Comments: 3<br>Views: 1,521</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+      <div class="dots"><span class="active"></span><span></span></div>
+    </section>
+
+    <section class="browse-section" id="military">
+      <h1>Military Aircraft</h1>
+      <div class="card-row">
+        <div class="card">
+          <img src="Santiago Blanquez.webp" alt="Santiago Blanquez">
+          <h3>Santiago Blanquez</h3>
+          <p>Likes: 233<br>Comments: 8<br>Views: 16,121</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Peter Steinemann.webp" alt="Peter Steinmann">
+          <h3>Peter Steinmann</h3>
+          <p>Likes: 191<br>Comments: 5<br>Views: 8,970</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Tomo-papa.webp" alt="Tomo-papa">
+          <h3>Tomo-papa</h3>
+          <p>Likes: 13<br>Comments: 0<br>Views: 1,141</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+      <div class="dots"><span class="active"></span><span></span></div>
+    </section>
+
+    <section class="browse-section" id="general">
+      <h1>General Aviation</h1>
+      <div class="card-row">
+        <div class="card">
+          <img src="MythicLegend.webp" alt="MythicLegend">
+          <h3>MythicLegend</h3>
+          <p>Likes: 4<br>Comments: 0<br>Views: 159</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Sebastian Sowa.webp" alt="Sebastian Sowa">
+          <h3>Sebastian Sowa</h3>
+          <p>Likes: 3<br>Comments: 0<br>Views: 99</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="Alonso Cinseros.webp" alt="Alonso Cineros">
+          <h3>Alonso Cineros</h3>
+          <p>Likes: 6<br>Comments: 0<br>Views: 76</p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+      <div class="dots"><span class="active"></span><span></span></div>
+    </section>
+
+  </main>
 </div>
-<br>
 
-<h1>Twin-Aisle Aircraft (Widebody)</h1>
+<footer>
+  <a href="#">FAQ</a>
+  <a href="#">Contact Us</a>
+</footer>
 
-<div Twin>
-        <img src="a330-300.jpg" alt="Airbus A330-300" class="side-img" width="700" height="400">
-        <img src="767-hero-mobile.jpg" alt="Boeing 767" class="side-img" width="700" height="400">
-        <h1>Airbus A330-300 & Boeing 767</h1>
-        <p> A widebody (or twin-aisle) aircraft is any airliner wide enough to fit two separate aisles down the cabin, typically accommodating 7 to 10 seats across in economy class (compared to a narrowbody's single aisle and 3–6 seats across). This wider fuselage — usually 5 to 6 meters in diameter — allows for greater passenger capacity, more cargo volume beneath the cabin, and longer range capability, making widebodies the aircraft of choice for long-haul international routes, high-density regional trunk routes, and cargo operations. They sit at the opposite end of the size spectrum from narrowbodies like the A320 or 737, and typically require two engines (or historically four, as with the 747 and A380) mounted under the wings.
-            Within the widebody category, the Airbus A330-300 and Boeing 767 represent two of the most enduring "mid-size" widebody families — aircraft that predate the composite-heavy A350/787 generation but remain heavily used today for medium-to-long-haul routes that don't need the size of a 777 or A350.</p>
-</div>
-
-<div class="widebody-specs"> 
-
-    <h2>Widebody Aircraft Specifications</h2>
-    <table class="Aircraft-table">
-        <thead>
-            <tr>
-                <th>Aircraft</th>
-                <th>Seating Capacity</th>
-                <th>Range</th>
-                <th>Length</th>
-                <th>Wingspan</th>
-                <th>Cruise Speed</th>
-                <th>Fuselage</th>
-                <th>Engines</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Airbus A330-300</td>
-                <td>350-430+</td>
-                <td>6,350 nmi</td>
-                <td>63.6 m</td>
-                <td>60.3 m</td>
-                <td>Mach 0.82</td>
-                <td>5.28 m</td>
-                <td>Rolls-Royce Trent 700</td>
-            </tr>
-            <tr>
-                <td>Boeing 767</td>
-                <td>269-340+</td>
-                <td>5,980 nmi</td>
-                <td>54.9 m</td>
-                <td>50.90 m</td>
-                <td>Mach 0.80</td>
-                <td>5.03 m</td>
-                <td>General Electric CF6-80C2</td>
-            </tr>
-        </tbody>
-    </table>
-
-</div>
-
-<br>
-
-<h1>Jumbo Aircraft (Jumbo Jet)</h1>
-
-<div Jumbo>
-        <img src="a380.jpg" alt="Airbus A330-300" class="side-img" width="700" height="400">
-        <img src="747.jpg" alt="Boeing 767" class="side-img" width="700" height="400">
-        <h1>Airbus A380 & Boeing 747-8</h1>
-        <p>A jumbo aircraft (or "jumbo jet") is the largest class of wide-body airliner, generally defined by a maximum takeoff weight over 300 tonnes and passenger capacity exceeding 400 in a typical configuration. The term originated with the Boeing 747 in 1970 — the first wide-body aircraft ever built — and was later extended informally to the Airbus A380, sometimes distinguished as a "superjumbo" since it surpassed the 747 in overall size and capacity. Jumbo aircraft were designed to meet the highest-demand routes on the world's busiest long-haul corridors, moving the most passengers per flight to lower the cost per seat on those routes. Unlike the twin-engine widebodies that now dominate the market (A330, 787, 777, A350), jumbos traditionally use four engines, trading higher fuel burn for greater payload and range capability — a trade-off that has pushed both manufacturers to end passenger production in favor of more efficient twinjets. Within this class, the Airbus A380 and Boeing 747-8 represent the largest passenger aircraft ever built by each manufacturer, and the final chapter of the four-engine jumbo era.</p>
-</div>
-
-<div class="Jumbo-specs"> 
-
-    <h2>Jumbo Aircraft Specifications</h2>
-    <table class="Aircraft-table">
-        <thead>
-            <tr>
-                <th>Aircraft</th>
-                <th>Seating Capacity</th>
-                <th>Range</th>
-                <th>Length</th>
-                <th>Wingspan</th>
-                <th>Cruise Speed</th>
-                <th>Fuselage</th>
-                <th>Engines</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Airbus A380</td>
-                <td>525–853+</td>
-                <td>8,000 nmi</td>
-                <td>72.7 m</td>
-                <td>79.75 m</td>
-                <td>Mach 0.85</td>
-                <td>7.14 m</td>
-                <td>Rolls-Royce Trent 900</td>
-            </tr>
-            <tr>
-                <td>Boeing 747-8</td>
-                <td>410–605+</td>
-                <td>7,730 nmi</td>
-                <td>76.3 m</td>
-                <td>68.4 m</td>
-                <td>Mach 0.85</td>
-                <td>6.5 m</td>
-                <td>General Electric GEnx-2B67</td>
-            </tr>
-        </tbody>
-    </table>
-
-</div>
-
-
+</body>
 </html>

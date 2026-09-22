@@ -1,11 +1,11 @@
- { box-sizing: border-box; margin: 0; padding: 0; }
+ *{ box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: Arial, system-ui, sans-serif;
     background: #eef2f6;
     color: #1a1a1a;
   }
 
-  /* ---------- Navbar ---------- */
+
   nav {
     background: #0B3D91;
     display: flex;
@@ -28,7 +28,7 @@
   }
   .nav-links a:hover { color: #cfe0f7; }
 
-  /* ---------- Hero ---------- */
+ 
   .hero {
     max-width: 1120px;
     margin: 0 auto;
@@ -39,7 +39,7 @@
     align-items: start;
   }
   .hero h1 {
-    font-size: 38px;
+    font-size: 50px;
     font-weight: 800;
     line-height: 1.15;
   }
@@ -53,14 +53,14 @@
     .hero { grid-template-columns: 1fr; }
   }
 
-  /* ---------- Plane types section ---------- */
+
   .types {
     max-width: 1120px;
     margin: 0 auto;
     padding: 24px 48px 80px;
   }
   .types h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
     margin-bottom: 28px;
   }
@@ -94,7 +94,7 @@
     color: #333;
   }
 
-  /* ---------- Community section ---------- */
+ 
   .community {
     max-width: 1120px;
     margin: 0 auto;
@@ -140,7 +140,6 @@
     .community-grid { grid-template-columns: 1fr; }
   }
 
-  /* ---------- Footer ---------- */
   footer {
     background: #0B3D91;
     padding: 24px 48px;
