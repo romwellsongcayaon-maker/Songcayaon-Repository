@@ -7,5 +7,7 @@
 			"path": "Images"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Songcayaon-Repository"
+	}
 }

@@ -4,60 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spot &amp; Fly — Profile</title>
-<link rel ="stylesheet" href="Prof.css">
+<link rel="stylesheet" href="Home.css">
+<link rel="stylesheet" href="Prof.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 
 <body>
 
 <nav>
   <div class="logo">
-    <img src="1.jpg" alt="Spot & Fly logo">
+    <a href="Home.html"><img src="1.jpg" alt="Spot & Fly logo"></a>
   </div>
   <div class="nav-links">
-    <a href="home.html">Home</a>
-
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="Profile.html" class="active">Profile</a>
   </div>
 </nav>
 
-<section class="login-prompt">
-  <h1>You're still not Logged-in or<br>Created an account.</h1>
-  <div class="login-actions">
-    <a href="Login.html" class="btn-auth">Log-in</a>
-    <a href="Regis.html" class="btn-auth">Sign-In</a>
-  </div>
-</section>
+<!-- Blue banner behind the profile card -->
+<div class="profile-cover"></div>
 
-<section class="profile">
-  <div class="avatar">
-    <img src="prof.jpg" alt="User Avatar">
-  </div>
-  <div class="profile-info">
-    <h2>Profile Information</h2>
-    <div class="info-grid">
-      <div>Name: </div>
-      <div>Equipment Used: </div>
-      <div>Username: </div>
-      <div>Total Uploads: </div>
-      <div>Home Airport:</div>
+<div class="profile-layout">
+
+  <!-- ============ LEFT: PROFILE CARD ============ -->
+  <section class="profile-card">
+
+    <!-- Replace the <i> with: <img src="my-photo.jpg" alt="Full Name"> -->
+    <div class="avatar avatar-profile">
+      <i class="fa-solid fa-user" aria-hidden="true"></i>
     </div>
-  </div>
-</section>
-<div class="bio-row">Bio: <span></span></div>
 
-<section class="gallery">
-  <h2>GALLERY</h2>
-  <div class="gallery-grid">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-  </div>
-</section>
+    <h1 class="profile-name">Full Name</h1>
+    <p class="profile-handle">@username &middot; Aviation Spotter</p>
+    <p class="profile-bio">Bio Here</p>
+
+    <div class="profile-actions">
+      <a class="btn btn-primary" href="#"><i class="fa-solid fa-pen" aria-hidden="true"></i> Edit Profile</a>
+      <a class="btn btn-outline" href="#"><i class="fa-solid fa-camera" aria-hidden="true"></i> Upload Photo</a>
+    </div>
+
+    <ul class="profile-stats">
+      <li><strong>0</strong><span>Photos</span></li>
+      <li><strong>0</strong><span>Likes</span></li>
+      <li><strong>0</strong><span>Views</span></li>
+      <li><strong>0</strong><span>Rank</span></li>
+    </ul>
+
+    <ul class="profile-details">
+      <li><i class="fa-solid fa-envelope" aria-hidden="true"></i>---</li>
+      <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>---</li>
+      <li><i class="fa-solid fa-calendar" aria-hidden="true"></i>---</li>
+    </ul>
+
+    <a class="profile-logout" href="login.html"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Log out</a>
+
+  </section>
+
+
+  <!-- ============ RIGHT: MAIN CONTENT ============ -->
+  <main class="profile-main">
+
+    <!-- MY PHOTOS -->
+    <aside class="profile-section" id="my-photos">
+      <h2>My Photos <a href="#">View all &rarr;</a></h2>
+
+      <div class="card-row">
+        <div class="card">
+          <img src="" alt="Photo 1">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="" alt="Photo 2">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="" alt="Photo 3">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="" alt="Photo 4">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="" alt="Photo 5">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+        <div class="card">
+          <img src="" alt="Photo 6">
+          <h3>Photo Title</h3>
+          <p><i class="fa-solid fa-heart fa-fw"></i> Likes: <br><i class="fa-solid fa-comment fa-fw"></i> Comments: <br><i class="fa-solid fa-eye fa-fw"></i> Views: </p>
+          <a href="#" class="more">For More Information →</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
 
 <footer>
   <a href="#">FAQ</a>

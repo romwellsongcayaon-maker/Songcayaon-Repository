@@ -5,9 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spot &amp; Fly — Browse</title>
 <link rel ="stylesheet" href="Home.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+
+
+
+
+
 
 <nav>
   <div class="logo">
@@ -20,6 +24,7 @@
   </div>
 </nav>
 
+
 <div class="layout">
   <aside>
     <ul class="sort-links">
@@ -29,11 +34,19 @@
       <li><a href="#">People's Choice</a></li>
     </ul>
     <ul class="category-links">
-      <li><a href="#commercial">Commercial Airliners</a></li>
-      <li><a href="#cargo">Cargo Aircraft</a></li>
-      <li><a href="#military">Military Aircraft</a></li>
-      <li><a href="#general">General Aviation</a></li>
+    <li class="has-dropdown">
+      <a href="#" class="dropdown-toggle">Commercial Airliners</a>
+      <ul class="dropdown-menu">
+        <li><a href="#commercial">Airbus</a></li>
+        <li><a href="#commercial">Boeing</a></li>
+      </ul>
+    </li>
+    <li><a href="#cargo">Cargo Aircraft</a></li>
+    <li><a href="#military">Military Aircraft</a></li>
+    <li><a href="#general">General Aviation</a></li>
+
     </ul>
+   
   </aside>
 
   <main>
@@ -164,6 +177,113 @@
     </section>
 
   </main>
+
+
+
+  <aside class="leaderboard" aria-label="Leaderboards">
+
+   
+    <div class="board board-weekly">
+      <div class="board-header">
+        <h2>Top Spotter This Week</h2>
+        <span class="board-tag">Weekly</span>
+      </div>
+
+      <!-- #1 featured user -->
+      <div class="top-user">
+        <i class="fa-solid fa-crown crown" aria-hidden="true"></i>
+        <div class="avatar avatar-xl">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </div>
+        <h3 class="top-user-name">Username</h3>
+        <p class="top-user-sub">Most liked this week</p>
+        <ul class="top-user-stats">
+          <li><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</li>
+          <li><i class="fa-solid fa-camera" aria-hidden="true"></i> 0</li>
+        </ul>
+      </div>
+
+      <!-- #2 - #5 -->
+      <ol class="rank-list" start="2">
+        <li class="rank-item">
+          <span class="rank-num">2</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>Photographer</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item">
+          <span class="rank-num">3</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>Photographer</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item">
+          <span class="rank-num">4</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>Photographer</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item">
+          <span class="rank-num">5</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>Photographer</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- ALL-TIME BOARD -->
+    <div class="board board-alltime">
+      <div class="board-header">
+        <h2>Most Active Users</h2>
+        <span class="board-tag board-tag-alt">All Time</span>
+      </div>
+
+      <ol class="rank-list">
+        <li class="rank-item rank-gold">
+          <span class="rank-num">1</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>0 photos</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item rank-silver">
+          <span class="rank-num">2</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>0 photos</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item rank-bronze">
+          <span class="rank-num">3</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>0 photos</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item">
+          <span class="rank-num">4</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>0 photos</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+
+        <li class="rank-item">
+          <span class="rank-num">5</span>
+          <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <div class="rank-info"><strong>Username</strong><small>0 photos</small></div>
+          <span class="rank-score"><i class="fa-solid fa-heart" aria-hidden="true"></i> 0</span>
+        </li>
+      </ol>
+
+      <a class="board-more" href="#">View full leaderboard &rarr;</a>
+    </div>
+
+  </aside>
+
 </div>
 
 <footer>
@@ -171,5 +291,26 @@
   <a href="#">Contact Us</a>
 </footer>
 
+<script>
+  // Open / close the Commercial Airliners dropdown
+  document.querySelector('.dropdown-toggle').addEventListener('click', function () {
+    this.parentElement.classList.toggle('open');
+  });
+</script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
