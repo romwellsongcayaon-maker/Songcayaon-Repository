@@ -1,0 +1,81 @@
+
+
+.upload-main {
+  flex: 1;                     
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.upload-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--blue);
+  text-decoration: none;
+}
+.upload-back:hover { text-decoration: underline; }
+
+
+.upload-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(15, 63, 148, 0.06);
+}
+.upload-card h1 { font-size: 24px; margin-bottom: 6px; }
+.upload-card .hint { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+
+/* form fields */
+.upload-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.upload-field label { font-size: 14px; font-weight: 700; }
+
+.upload-field input[type="text"],
+.upload-field select {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+.upload-field input[type="file"] {
+  padding: 10px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  background: #fafcff;
+}
+.upload-field input:focus,
+.upload-field select:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+
+.upload-card .btn {
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* error message */
+.upload-error {
+  background: #fdecef;
+  color: #b00020;
+  border: 1px solid #f5c2cb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}

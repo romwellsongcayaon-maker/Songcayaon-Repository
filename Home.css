@@ -1,0 +1,374 @@
+:root {
+  --blue: #0f3f94;
+  --blue-dark: #0b2f70;
+  --blue-light: #e8eefa;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --bg: #ffffff;
+  --gold: #f5b301;
+  --silver: #9ca3af;
+  --bronze: #c97b3a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, system-ui, sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+nav {
+  background: #0B3D91;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+}
+.logo img {
+  height: 100px;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav-links a:hover { color: #cfe0f7; }
+
+
+/* 3 columns: left menu | photos | leaderboard */
+.layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 320px;   /* photos column stretches */
+  column-gap: 24px;
+  align-items: start;     /* lets the leaderboard stick while scrolling */
+  max-width: 1800px;      /* keeps it tidy on very wide monitors */
+  margin: 0 auto;
+  padding-right: 32px;    /* small gap from the right edge */
+}
+
+
+aside {
+  padding: 32px 24px;
+}
+.sort-links {
+  list-style: none;
+  margin-bottom: 24px;
+}
+.sort-links li { margin-bottom: 10px; }
+.sort-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+}
+.sort-links a:hover { text-decoration: underline; }
+.category-links {
+  list-style: disc;
+  padding-left: 18px;
+}
+.category-links li { margin-bottom: 8px; }
+.category-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+}
+.category-links a:hover { text-decoration: underline; }
+
+
+.browse-section {
+  padding: 40px 48px 56px;
+  border-top: 1px solid #e2e2e2;
+}
+.browse-section:first-of-type { border-top: none; }
+.browse-section h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* photos keep their shape as the cards grow */
+  object-fit: cover;
+  background: #dcdcdc;
+  display: block;
+  margin-bottom: 12px;
+}
+.card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+.card p i { color: var(--blue); }
+.card a.more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.card a.more:hover { text-decoration: underline; }
+
+/* ---------- Dropdown (Commercial Airliners) ---------- */
+.dropdown-toggle::after {
+  content: "▾";
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+.has-dropdown.open .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  list-style: circle;
+  padding-left: 18px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.35s ease;
+}
+.has-dropdown.open .dropdown-menu {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+
+.dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 28px;
+}
+.dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  display: inline-block;
+}
+.dots span.active { background: #1a1a1a; }
+
+
+footer {
+  background: #0B3D91;
+  padding: 24px 48px;
+  display: flex;
+  gap: 32px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer a:hover { color: #cfe0f7; }
+
+
+/* ==========================================================
+   LEADERBOARD
+   ========================================================== */
+
+/* Hidden icon sprite (used by the <use href="#icon-..."> icons) */
+.svg-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.leaderboard {
+  position: sticky;        /* stays visible while scrolling the photos */
+  top: 16px;
+  margin-top: 40px;        /* lines up with the first section heading */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.leaderboard ul,
+.leaderboard ol { list-style: none; }
+.leaderboard a { color: inherit; text-decoration: none; }
+
+.board {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(15, 63, 148, 0.06);
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.board-header h2 { font-size: 17px; }
+
+.board-tag {
+  background: var(--blue);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.board-tag-alt { background: var(--blue-light); color: var(--blue); }
+
+/* ---------- Avatar placeholder ---------- */
+.avatar {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dfe5f1;
+  color: #9aa8c4;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.avatar i { font-size: 18px; }
+.avatar-xl i { font-size: 34px; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.avatar-xl {
+  width: 84px;
+  height: 84px;
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 0 4px #fff, 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- #1 featured user (weekly) ---------- */
+.top-user {
+  position: relative;
+  text-align: center;
+  padding: 26px 12px 18px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--blue-light), #fff);
+}
+.top-user .crown {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: var(--gold);
+}
+.top-user .avatar { margin: 0 auto; }
+.top-user-name { margin: 12px 0 2px; font-size: 18px; }
+.top-user-sub { margin: 0 0 10px; font-size: 13px; color: var(--muted); }
+
+.top-user-stats { display: flex; justify-content: center; gap: 18px; font-size: 14px; font-weight: 700; }
+
+.top-user-stats li:first-child i { color: #e11d48; }
+
+/* ---------- Rank rows ---------- */
+.rank-list { display: flex; flex-direction: column; gap: 4px; }
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.rank-item:hover { background: #f4f6fb; }
+
+.rank-num {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.rank-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+
+.rank-score {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.rank-score i { font-size: 13px; color: #e11d48; }
+
+
+/* ---------- Footer link ---------- */
+.board-more {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.board-more:hover { text-decoration: underline; }
+
+
+/* ==========================================================
+   RESPONSIVE (widest screen first, phone rules last)
+   ========================================================== */
+
+/* Laptops: shrink the side columns a little */
+@media (max-width: 1300px) {
+  .layout {
+    grid-template-columns: 200px minmax(0, 1fr) 280px;
+    justify-content: stretch;
+  }
+  .browse-section { padding: 32px 32px 48px; }
+}
+
+/* Tablets: leaderboard moves under the photos */
+@media (max-width: 1150px) {
+  .layout { grid-template-columns: 200px minmax(0, 1fr); }
+  .leaderboard {
+    grid-column: 2;
+    position: static;
+    margin: 0 32px 40px;
+  }
+}
+
+/* Small tablets: 2 photos per row */
+@media (max-width: 900px) {
+  .card-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Phones: everything in one column */
+@media (max-width: 700px) {
+  nav { padding: 12px 20px; }
+  .logo img { height: 60px; }
+  .nav-links { gap: 18px; }
+
+  .layout { grid-template-columns: 1fr; }
+  aside { padding: 20px; }
+  .leaderboard { grid-column: 1; margin: 0 20px 32px; }
+
+  .browse-section { padding: 28px 20px 40px; }
+  .browse-section h1 { font-size: 24px; }
+  .card-row { grid-template-columns: 1fr; gap: 24px; }
+  .card img { height: 200px; }
+
+  footer { padding: 20px; }
+}

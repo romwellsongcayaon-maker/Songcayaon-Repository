@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Log-in Styles.css">
+</head>
+
+<body>
+
+  <div class="brand">
+    <img src="1.jpg" alt="My Logo">
+    <span>Spot and Fly</span>
+  </div>
+
+  <div class="card">
+    <h1>Log-In</h1>
+
+    <form id="loginForm" method = "post" action = "login.php" >
+      <div class="field">
+        <label for="login">Email or Username</label>
+        <input type="text" id="login" name="login" placeholder="Enter your email or username  " required>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" name="terms">
+        <span>Remember Account?</span>
+      </label>
+
+      <button type="submit" class="submit">Log-In</button>
+    </form>
+
+    <p class="switch-line">Don't have an Account? <a href="regis.html">Register</a></p>
+  </div>
+
+</body>
+</html>
